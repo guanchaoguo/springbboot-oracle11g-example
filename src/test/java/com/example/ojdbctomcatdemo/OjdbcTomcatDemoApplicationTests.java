@@ -24,7 +24,7 @@ class OjdbcTomcatDemoApplicationTests {
 //        jdbcTemplate.update(querySQL, "na22222me", 1);
 
 
-        querySQL = "SELECT * FROM \"RQGLB\".\"APPLY_STATION_INFO\"";
+        querySQL = "SELECT * FROM RQGLB.APPLY_STATION_INFO where rownum <= 1 ";
         List vo = jdbcTemplate.queryForList(querySQL);
         System.out.println(">>>>>>>>>" + vo.toString());
 
